@@ -1,0 +1,44 @@
+<!DOCYTYPE html>
+<html>
+	<head>
+		<title>citiSent | Home Page</title>
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		
+		<!--Load the AJAX API-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    
+		
+		
+		
+		
+	</head>
+	<body>
+	<div id=container>
+		<div id=header>
+				
+					<div id='navbar'>
+					<a href="/"><img src="static\img\logo.png" alt="logo" height=86% width=auto></a>
+							<ul>
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/welcome">Summary</a></li>
+								<li><a href="/welcome">Sentiment Analysis</a></li>
+								<li><a href="/documentation">Documentation</a></li>
+								<li><a href="/cities">Cities</a></li>
+								<li><a href="/log">Login</a></li>
+							</ul>
+					</div>
+		</div>
+		
+	
+		{% block content %}
+		{% endblock %}
+		
+		
+		<div id="footer"><img src="/static/img/sig.png" height="70px" alt="sig" hspace="10" vspace="0"><img src="/static/img/logo.png" align="right" height="50px" alt="sig" hspace="10" vspace="0"> <center><a href="/logout">Logout</a><a hrefLogout</center><div>
+		
+	</div>
+
+</body>

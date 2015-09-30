@@ -1,0 +1,27 @@
+	{% extends "template.html" %}
+	{% block content %}
+		<h1>Search Term</h1>
+		{% if error %}
+			<p class=error>{{ error }}
+		{% endif %}
+		{% if confirm %}
+			<p class=error><strong>Error:</strong> {{ confirm	 }}
+		{% endif %}
+		<form action="" method=post>
+			<dl>
+				<dt>Please enter a Word:
+				<dd><input type=text name=term value="">
+				<dt>Please enter the Number of Tweets You want to Collect:
+				<dd><input type=text name=maxtweet value="">
+
+			</dl>
+			<p><input type=submit value=Submit>
+		</form>
+	{% for message in get_flashed_messages() %}
+		<div class=flash>
+		{{ message | safe }}
+		</div>
+		{% endfor %}
+	{% endblock %}
+	
+	

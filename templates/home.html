@@ -1,0 +1,69 @@
+{% extends "template.html" %}
+{% block content %}
+	
+		<div id="maincontainer">
+		
+		<h1 align="right"> How happy is your citi? </h1>
+  <div class="feature f1">
+    <div class="overlay"><a href="../welcome">What is Sentiment Analysis</a></div>
+  </div>
+  <div class="feature f2">
+    <div class="overlay"><a href="../citisent">How Does <strong><i>citiSent</i></strong> Work?</a></div>
+  </div>
+  <div class="feature f3">
+    <div class="overlay"><a href="../contact">Contact Us</a></div>
+  </div>
+  
+  
+  <div class="jumbo"><br>
+  <h2>Ireland's first real time city happiness index</h2>
+		<p class="marg">Marketers have long been looking for new ways to measure social media engagement. 
+		Measuring the attitude of a consumer towards a brand, better known as sentiment analysis, is one method that is gaining traction.</p>
+		
+		<p class="marg">This website has been designed with Alchemy API, Python and a Flask web interface to deliver a comprehensive and easy to use twitter sentiment analysis tool.
+			The purpose of this tool is for research purposes only and required login details supplied by its creator. You cannot register and use this tool without first
+			contacting the author. </p>
+			
+			<h2 style="font-family: 'PT Sans Narrow', sans-serif;">Advantages and Disadvantages of Twitter Analysis</h2>
+			
+			<div class="mainpagecontent">
+			<h3 style="font-family: 'PT Sans Narrow', sans-serif;">Monitor Opinion Changes over Time</h3>
+			<p> Businesses in particular can use the sentiment analysis to monitor broad consumer changes in customer opinions over time. According to popular bloggers Surit,J (2010) this in particular can result in a relatively cost efficient method of improving customer service. This method of consumer interaction allows companies to alter or change their customer service approach in response to real time data. For example it is recommended that companies can proactively engage with users posting negative sentiment tweets and attempt to create a positive consumer experience (Conlin,B 2013).
+						<p>There is also no standard definition of what accuracy means. Furthermore, sarcasm has proven difficult for machines to distinguish between positive and negative connotations. The word &ldquo;great&rdquo; in the sentence &ldquo;Their customer service really is great ! LOL&rdquo; would read as a positive while the extension of the &ldquo;LOL&rdquo; at the end of the sentence allows the human reader to understand the the tone of the message is sarcasm while a machine would read the message as a positive (Wright, 2009).</p>
+
+			</p>
+			</div>
+			
+			<div class="mainpagecontent">
+			<h3 style="font-family: 'PT Sans Narrow', sans-serif;">
+			<h3>Lower Cost</h3>
+
+			<p>As previously stated the cost of performing a traditional market research focus group of approximately 8 people averages at about $6000 per 90 minute session (Suttle,R 2012) . The limitation here, as well as the obvious cost, is the small amount of opinions that can be gleaned from the session. Trying to get a wider view of consumer sentiment through phone surveys can cost between $5000 and $15000 which does not include the report writing and data coalition that is conducted by a market research company. </p>
+
+			<p>However twitter sentiment analysis can provide similar vital commercial data for a significantly reduced cost to the traditional methods. Standard twitter analytics such as Tweetfeel or Tweetrater offer free basic twitter sentiment analysis. There are however larger and more comprehensive analytical packages such as Ubervu or SDL which do charge larger subscription fees for enterprise level sentiment analysis as outlined by Sharon Hurley Hall (2013) in her comprehensive guide to the cost of Social Media analytics for small and large budgets.</p>
+
+			</div>
+
+			<div class="mainpagecontent">
+			<h3>
+			Context &amp; Sarcasm &amp; Sentimentality</h3>
+
+			<p>Sentiment can be a difficult concept to master for a human interpreter of a sentence or statement, The problem of interpretation becomes even more exaggerated when a machine is attempting to apply meaning to a statement. The human interpretation of the same statement can be either positive or negative based on the subjective understanding of the phrase (Rhodes 2012). Joe Mullich(2012) gives further examples of where automated sentiment analysis techniques can return incorrect data in the form of</p>
+
+			<p>Ironic statements, various forms of humor and other language subtleties and emotions can reverse the tone of an otherwise negative or positive statement.<br />
+			Automated spam filled conversations on twitter which are clearly inauthentic, robotic or wasteful.<br />
+			False negatives, where the software sees a negative word but doesn&rsquo;t comprehend that it is a positive in the overall context of the tweet. <br />
+			Cultural &amp; regional differences, where some people from some countries or counties might convey their emotions differently based on colloquialisms.</p>
+
+
+			
+			
+			
+			</div>
+
+
+
+				<br/>
+		<p>Click <a href="/welcome">here</a> to go to start analysing tweets</p>
+	</div>
+{% endblock %}

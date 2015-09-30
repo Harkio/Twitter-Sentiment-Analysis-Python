@@ -1,0 +1,26 @@
+	{% extends "template.html" %}
+	{% block content %}
+	<div id="maincontainer">
+		<h1>Login</h1>
+		{% if error %}
+			<p class=error><strong>Error:</strong> {{ error }}
+		{% endif %}
+		<div class="login">
+		<form action="" method=post>
+			<dl>
+				
+				<dd><input type=text name=username value="Username">
+				<br>
+				<br>
+				<dd><input type=text name=password value="Password">
+			</dl>
+			<p><input type=submit value=Login>
+		</form>
+		</div>
+	{% for message in get_flashed_messages() %}
+		<div class=flash>
+		{{ message }}
+		</div>
+		{% endfor %}
+	{% endblock %}
+	

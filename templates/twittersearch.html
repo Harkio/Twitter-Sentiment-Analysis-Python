@@ -1,0 +1,160 @@
+{% extends "template.html" %}
+{% block content %}
+
+	<img src="/static/img/badges/5.png">
+  
+
+<div id="maincontainer">
+
+
+	<h1> Galway</h1>
+	<p>Galway is a city in the West of Ireland in the province of Connacht. {{ btweets }} Galway City Council is the local authority for the city.
+	Galway lies on the River Corrib between Lough Corrib and Galway Bay and is surrounded by County Galway. </p>
+	
+<img style="float:left margin-left: auto margin-right: auto;" src="static/img/galway.jpg" alt="Image of Galway" width=900px height=auto hspace="2" vspace="10" >
+<img style="float:left margin-left: auto margin-right: auto;" src="static/img/badges/5.png" alt="Image of Galway" width=900px height=auto hspace="2" vspace="10" >
+
+	
+	
+	
+  <div class="mainpagecontent">
+   <h4><strong> The 10 negative Posts about Galway by Galway People	</strong></h4>
+	{% for item in tweet %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+		{% endfor %}
+		
+		
+  </div>
+  
+  <div class="mainpagecontent">
+  
+  <h4><strong> Top Ten Happiest Posts About Galway by Galway People	</strong></h4>
+	{% for item in tweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+	{% endfor %}
+  
+  </div>
+  
+  <div class="mainpagecontent">
+  
+  <h4><strong> The 10 Happiest Posts about Galway by anyone	</strong></h4>
+	{% for item in atweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+	{% endfor %}
+  
+  </div>
+  
+  <div class="mainpagecontentwide">
+  
+  <h4><strong> Top 10 Tweet Keywords	</strong></h4>
+	{% for item in ctweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.tweet }} </br>
+	{% endfor %}
+  
+  </div>
+  
+    <div class="mainpagecontent">
+  
+  <h4><strong> Total Tweets about Galway	</strong></h4>
+	{% for item in dtweets %}
+	 Of the total number of tweets collected about Galway <strong>{{ item.count }}</strong> were {{ item.sentiment }} </br></br>
+		{% endfor %}
+  
+  </div>
+  
+     <div class="mainpagecontent">
+  
+  <h4><strong> Most Prolific	</strong></h4>
+	{% for item in ftweets %}
+	 There was one user who couldnt stop talking about Galway. User <strong>{{ item.user }}</strong> wasp the most prolific tweeter about Galway. They
+sent messages containing the cities name <strong>{{ item.count }}</strong> times ! You can check out this person's  
+<a href="http://www.twitter.com/{{ item.user }}">twitter page</a> to find out more. </br></br>
+	{% endfor %}
+	
+	
+	{% for item in ftweets %} 
+	{%if item.count <= 5 %}
+	<img src="/static/img/badges/5.png">
+	{% elseif item.count <=	10 %}
+	<img src="/static/img/badges/10.png">
+	{% elseif item.count <=	15 %}
+	<img src="/static/img/badges/15.png">
+	{% elseif item.count <=	20 %}
+	<img src="/static/img/badges/20.png">
+	{% endif %}
+	{% endfor %}
+	
+  </div>
+  
+  
+
+  
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	
+	
+  
+{% endblock %}
+	
+

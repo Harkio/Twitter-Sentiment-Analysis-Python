@@ -1,0 +1,123 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+  
+
+<div id="maincontainer">
+
+
+
+	<h1> Dublin</h1>
+	<p class="marg">The capital is a strange mixture of the busy city centre, outlying village-like communities and huge suburban estates all melting 
+	together into one big metropolitan sprawl. The tourist will more than likely stick to the walkable center (roughly defined by Parnell Square to the 
+	North, St Stephen's Green to the South, Custom House to the East and the cathedrals to the West), with only excursions to the Phoenix Park or St James' 
+	Gate (Guinness) taking him out of this area.
+	<br><br>
+	But even in this small part nearly all aspects of Dublin life can be seen -
+	 from the hustle and bustle of the ultra-modern IFSC to the drug-riddled areas of social housing nearby, from the
+	 Georgian splendour of Merrion Square to the utilitarian office blocks placed between here and the Liffey, and including
+	 cobbled side-streets, magnificent parks, stately (and mostly state-owned) buildings and seemingly millions of young people.</p>
+
+	
+<center><img style="float:left margin-left: auto margin-right: auto;" src="static/img/dublin_long.png" alt="Image of Dublin" width=900px height=auto hspace="2" vspace="10" ></center>
+
+	
+	
+	
+  <div class="mainpagecontent" ><center>
+    <img src="/static/img/badges/top_left.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in tweet %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+		{% endfor %}
+		</center>
+		
+		
+		
+  </div>
+  
+  <div class="mainpagecontent"><center>
+  
+  <img src="/static/img/badges/top_middle.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in tweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+	{% endfor %}</center>
+  
+  </div>
+  
+  <div class="mainpagecontent">
+  <center>
+  <img src="/static/img/badges/top_right.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in atweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+	{% endfor %}</center>
+  
+  </div>
+  
+  <div class="mainpagecontentwide">
+  
+ <img src="/static/img/badges/top_main.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in ctweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.tweet }} </br>
+	{% endfor %}
+	<br>
+   <img src="/static/img/badges/negativ.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in btweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.tweet }} </br>
+	{% endfor %}
+	<br>
+  </div>
+  
+    <div class="mainpagecontent">
+  <center>
+  <img src="/static/img/badges/total.png" alt="Total" width=100%>
+	{% for item in dtweets %}
+	 Of the total number of tweets collected about Dublin <strong>{{ item.count }}</strong> were {{ item.sentiment }} </br></br>
+	
+		{% endfor %}
+		
+		
+		<img src="{{ g }}" stl alt="Certificate" width=auto ></center>
+  
+  </div>
+  
+     <div class="mainpagecontent" style=text-align:justify;>
+  
+  <img src="/static/img/badges/prolific	.png" alt="Total" width=100%>
+	{% for item in ftweets %}
+	 There was one user who couldnt stop talking about Dublin. User <strong>{{ item.user }}</strong> wasp the most prolific tweeter about Dublin. They
+sent messages containing the cities name <strong>{{ item.count }}</strong> times ! You can check out this person's  
+<a href="http://www.twitter.com/{{ item.user }}">twitter page</a> to find out more. </br></br>
+	{% endfor %}
+	
+	
+	{% for item in ftweets %} 
+	{%if item.count > 5 and item.count < 9 %}
+	<img src="/static/img/badges/5.png" alt="Certificate" width=100% >
+	{% elif item.count > 10 and item.count < 14 %}
+	<img src="/static/img/badges/10.png" alt="Certificate" width=100% >
+	{% elif item.count > 15 and item.count < 19 %}
+	<img src="/static/img/badges/15.png" alt="Certificate" width=100% >
+	{% elif item.count > 20 and item.count < 50 %}
+	<img src="/static/img/badges/20.png" alt="Certificate" width=100% >
+
+	{% endif %}
+	{% endfor %}
+	
+  </div>
+<div class="mainpagecontent">
+  <img src="/static/img/badges/average.png" alt="Average" width=100%>
+  <img src="/static/img/faces/{{ emotion }}.png" alt="Average Image" width=100%>
+	
+
+  </div>
+
+
+
+
+	
+	
+  
+{% endblock %}
+	
+

@@ -1,0 +1,126 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+  
+
+<div id="maincontainer">
+
+
+	<h1> Cork</h1>
+	<p class="marg">Cork City is Ireland's third city (after Dublin and Belfast) and has00_00026.jpg (25663 bytes)always been an important seaport. It began on an island in the swampy estuary of the River Lee (the name Corcaigh means a marsh), and gradually climbed up the steep banks on either side.
+
+Today the river flows through Cork city in two main channels, so that you find yourself constantly crossing bridges and hence Cork City's coat of arms bears the motto 'A Safe Harbour for Ships'.
+
+<br><br>
+
+Some of the main streets are built over channels where ships nuzzled their anchor-chains a century ago. Along the South Mall, you will see large gateways at street level, under steps leading to a higher main door. These were once boathouses, when merchants arrived at their warehouses by water.
+
+As the hilly streets go up and down, so do the voices of the citizens. They have a characteristic sing-song cadence, beloved of national comedians, and Corkonians are regarded as the most talkative of all the Irish.
+
+<br><br>
+ St. Finbarr is the founder and patron saint. He founded a monastery in the seventh century where St. Finn Barre's Cathedral now stands, and it grew into an extensive and wealthy establishment. It attracted the attention of the Viking sea-pirates who raided and burned the infant city, but returned 
+ in later years to settle and trade. The Anglo-Norman invasion in 1172 resulted in both the Danish lords and local McCarthy chiefs having to submit to Henry II, but Cork has always had a reputation for independence and stubborn resistance: it came to be known as "Rebel Cork".</p>
+
+	
+<center><img style="float:left margin-left: auto margin-right: auto;" src="static/img/cork_long.png" alt="Image of Cork" width=900px height=auto hspace="2" vspace="10" ></center>
+
+	
+	
+	
+  <div class="mainpagecontent" ><center>
+    <img src="/static/img/badges/top_left.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in tweet %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+		{% endfor %}
+		</center>
+		
+		
+		
+  </div>
+  
+  <div class="mainpagecontent"><center>
+  
+  <img src="/static/img/badges/top_middle.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in tweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+	{% endfor %}</center>
+  
+  </div>
+  
+  <div class="mainpagecontent">
+  <center>
+  <img src="/static/img/badges/top_right.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in atweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.score }} </br>
+	{% endfor %}</center>
+  
+  </div>
+  
+  <div class="mainpagecontentwide">
+  
+ <img src="/static/img/badges/top_main.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in ctweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.tweet }} </br>
+	{% endfor %}
+	<br>
+   <img src="/static/img/badges/negativ.png" alt="Top 10 By Keyword" width=100%>
+	{% for item in btweets %}
+	<strong><a href="http://www.twitter.com/{{ item.user }}">{{ item.user }}</a></strong><br>{{ item.tweet }} </br>
+	{% endfor %}
+	<br>
+  </div>
+  
+    <div class="mainpagecontent">
+  <center>
+  <img src="/static/img/badges/total.png" alt="Total" width=100%>
+	{% for item in dtweets %}
+	 Of the total number of tweets collected about Cork <strong>{{ item.count }}</strong> were {{ item.sentiment }} </br></br>
+	
+		{% endfor %}
+		
+		
+		<img src="{{ g }}" stl alt="Certificate" width=auto ></center>
+  
+  </div>
+  
+     <div class="mainpagecontent" style=text-align:justify;>
+  
+  <img src="/static/img/badges/prolific	.png" alt="Total" width=100%>
+	{% for item in ftweets %}
+	 There was one user who couldnt stop talking about Cork. User <strong>{{ item.user }}</strong> wasp the most prolific tweeter about Cork. They
+sent messages containing the cities name <strong>{{ item.count }}</strong> times ! You can check out this person's  
+<a href="http://www.twitter.com/{{ item.user }}">twitter page</a> to find out more. </br></br>
+	{% endfor %}
+	
+	
+	{% for item in ftweets %} 
+	{%if item.count > 5 and item.count < 9 %}
+	<img src="/static/img/badges/5.png" alt="Certificate" width=100% >
+	{% elif item.count > 10 and item.count < 14 %}
+	<img src="/static/img/badges/10.png" alt="Certificate" width=100% >
+	{% elif item.count > 15 and item.count < 19 %}
+	<img src="/static/img/badges/15.png" alt="Certificate" width=100% >
+	{% elif item.count > 20 and item.count < 50 %}
+	<img src="/static/img/badges/20.png" alt="Certificate" width=100% >
+
+	{% endif %}
+	{% endfor %}
+	
+  </div>
+<div class="mainpagecontent">
+  <img src="/static/img/badges/average.png" alt="Average" width=100%>
+  <img src="/static/img/faces/{{ emotion }}.png" alt="Average Image" width=100%>
+	
+
+  </div>
+
+
+
+
+	
+	
+  
+{% endblock %}
+	
+

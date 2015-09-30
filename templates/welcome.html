@@ -1,0 +1,127 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div id="maincontainer">
+	<h2>What is Twitter Sentiment </h2>
+	
+	<h3>Why do a Twitter Sentiment Analysis</h3>
+
+<p class="marg">
+No standardised term has yet been developed to describe the field of the computation and analysis of sentiment, subjectivity and opinion in text (Pang and Lee, 2008).Sentiment Analysis, also known as Opinion Mining is the &ldquo;computational study of people&rsquo;s opinions, attitudes and emotions towards and entity&rdquo; (Medhat 2014). Twitter provides us with an extremely large cross sectional reference of people&rsquo;s opinions on a variety of topics in real time . How is this important and why would people wish to conduct an analysis of twitter tweets? Firstly online consumer reviews and opinions can have serious ramifications for the business environment. For example the advent of the online travel review website, tripadvisor, has changed the holiday and hotel booking industry dramatically. It has been shown that travellers rely on the opinions of other members and their reviews when booking.Nodes, S. (2012) research has shown that 81% of travellers rely on other user&rsquo;s resources.</p>
+
+<p class="marg">So it is obviously important for those in the business community to have a handle on where consumer sentiment is at any given time. Wright in the New York times identified sentiment analysis in 2009 as a tool that can be used to return a clear and concise snapshot of consumer emotions to hard and usable data.. While a commercial application seems to be the driving factor in the development of sentiment analysis services online (Aspali,A 2013), there are further applications of this data that can be used such as towards a political aim for example . While one cannot argue that customer opinion or event voter predictions have not been generated in the past, online sentiment analysis has resulted in a lower cost response and a much larger dataset both in terms of the number of &ldquo;participants&rdquo; and the size of the geographical base. <br />
+</p></br>
+	
+	<p class="marg">Click <a href="/log">here</a> to log in.</p>
+	
+	</br>
+	
+	<p class="marg">Analysis of Techniques</p>
+
+<p class="marg">
+Overview of Current Techniques</p>
+
+<p class="marg">In the diagram above you can clearly see the different techniques which can be used to carry out a sentiment analysis study. These techniques are categorized broadly into a lexicon based and a machine learning based approach. </p>
+
+<p class="marg">Lexicon Based </p>
+
+<p class="marg">
+The Lexicon based approach to sentiment analysis involves the mapping of words from tweets to dictionaries that can either be created for the sentiment analysis at hand or predefined dictionaries from external sources. There is also the addition of opinion phrases and isom dictionaries which can be called the &ldquo;Opinion Lexicon&rdquo;. These dictionaries categorize and define the sentiment of the words or phrases into positive, negative or neutral. Such predefined dictionaries are available such as Wordnet or Wiktionary and use this form of semantic orientation, the practice of annotating dictionary words with their sentiment polarity and strength (Taboada,M 2011). </p>
+
+<p class="marg">The lexicon based approach can be categorized into two automated methods, the dictionary based approach and the corpus based approach. The strategy presented by Kim and Hovy in their 2004 paper &ldquo;Determining the Sentiment of Analysis&rdquo; explains the dictionary based approach as taking a small set of words or phrases and contrasting them against well known libraries and thesaurus. </p>
+
+<p class="marg">The challenge with the dictionary based approach is that it does not distinguish the subtleties of language and cannot find opinion words with specific undefined contextual meaning. </p>
+
+<p class="marg">Corpus based approach to lexicon analysis moves towards solving the challenge of finding context specific opinion words. Researchers Cruz and Troyano found that by building a library of opinion phrases along with individual words worked well however the domain or context (hotel reviews, car reviews) was required in order to return accurate results. This is because the corpus based lexicon style required a dictionary of phrases which is difficult to complete for all possible combinations and words. </p>
+
+<p class="marg">The corpus based approach can be further categorized into two approaches, the semantic approach and the statistical approach. The semantic approach used by the likes of Wordnet gives sentiment values reying on the similarities between words and assigning values accordingly .The sentiment of an unknown word can be determined by using synonyms and antonyms of the word to determine the polarity of the original word. The semantic approach can then be used to build a comprehensive lexicon model for description words such as nouns, verbs and adjective for use in sentiment analysis. </p>
+
+<p class="marg">The statistical approach however uses statistical techniques to find co-occurrence of patterns or opinion words.One would need to use a very large set of indexed material in order to build a complete corpus to ensure that any words have an available reference. The statistical model works by assigning the polarity of the word based on the frequency of occurrence of the word in positive, negative and neutral texts. If the word occurs frequently in positive texts the polity is defined as positive while if the word occurs frequently among negative texts, the word is defined as negative. </p>
+
+<p class="marg">The difficulty with statistical analysis for online reviews was identified by Hu and Bose who discovered that the writing style of online reviews would be different due to the mixture of linguistic and cultural backgrounds of the authors. One can postulate that since tweets are subject to localised slang, terms and phrases (Payne 2013) the same principle applies. </p>
+
+<p class="marg"></p>
+
+<p class="marg"></p>
+
+<p class="marg">Machine Learning</p>
+
+<p class="marg">We can see how the lexical approach can determine polarity of words but the system is unable to distinguish between subtle linguistic nuances such differentiating a sincere tweet from a sarcastic tweet or the differences between formal and informal words, non dictionary based words and misspellings. </p>
+
+<p class="marg">The process of machine learning involves the use of a training set of data and a learning algorithm in order to teach the program to dynamically polarise a word or combination of words. There are a number of frameworks associated with machine learning techniques and are knows as &ldquo;graphical models&rdquo;. </p>
+
+<p class="marg">The advantage of the machine learning models is that the program automates the difficult task of categorizing text according to its meaning. It is possible to combine the lexical and machine learning based approaches to gain greater accuracy by ensuring that the machine learning process is not entirely unsupervised in its classifications. </p>
+
+<p class="marg">There are a number of predefined open source training platforms that can be used when implementing a machine learning approach to sentiment analysis. This means that the time consuming procedure of creating a training set to use can often be bypassed unless a specific training set is required that has not yet been compiled. </p>
+
+<p class="marg">
+Naive Bayes</p>
+
+<p class="marg">The naive bayes classifier is argued to be the simplest and most commonly used classifier for machine learning (Medhat 2014). One of the advantages of the NB method is that the training set can be applied to the program in linear time rather than a more expensive iterative operation. </p>
+
+<p class="marg">The NB model works on the premise that all elements in the text are separate from others. It is a simple probabilistic classifier based on the Bayes theorem. The NB model assumes that there is or is not the presence of a word unrelated to any other word. For example a fruit may be round and red a NB classifier considers these properties independently to conclude that the fruit is probably and apple . This means that with a substantial supervised learning training model the BM classifiers can return highly accurate results. </p>
+
+<p class="marg">The advantage of the NB model is that is simple to design, fast and cost efficient. It has proven to be highly accurate as a method of measuring sentiment analysis outperforming more modern techniques (Medhat 2014). The NB model also requires a small amount of training data . Kang and Yoo however identified that there is a weighting towards positive sentiment in the NB model of approximately 10%(Medhat 2014). </p>
+
+<p class="marg">The algorithm for the NB classifier is given below. </p>
+
+<p class="marg">P(label | features) = P(label) * P(features | label) / P (features)</p>
+
+<p class="marg"></p>
+
+<p class="marg">
+Maximum Entropy</p>
+
+<p class="marg">The maximum entropy (maxent) classifier converters labeled feature sets to vectors using encoding. Unlike the naive bayes model, maxent does not assume that the features are completely independent from one another. Based on the training data provided to the algorithm this classifier selects the polarity based on the largest entropy. </p>
+
+<p class="marg">As maxent does not make any assumptions about the data provided it can be used when the dataset provides no information related to prior distributions of polarity. Maxent is also used when there is no assumption of the independence of features. The maxent requires more time to train that the naive bayes model but is a cost efficient method of textual analysis (Vriniotis,V 2013).</p>
+	
+		<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
+	
+{% endblock %}
+
